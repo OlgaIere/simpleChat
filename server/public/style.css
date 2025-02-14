@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* background-image: url("./you img); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:  #000;
+ 
+}
+
+main {
+    height: 100vh;
+
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+form {
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: .25rem;
+}
+
+input {
+    flex-grow: 1;
+    max-width: calc(80% - .25rem);
+}
+
+button {
+    width: 20%;
+}
+
+input,
+button {
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+.chat-display {
+   background-color:rgb(249, 245, 241);
+    list-style-type: none;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: #000 solid 2px;
+    margin: 1rem auto;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+
+#post--left {
+    width: 60%;
+    align-self: flex-start;
+}
+
+#post--right {
+    width: 60%;
+    align-self: flex-end; 
+   
+}
+#post--right:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px transparent;
+    top: 0;
+    left: -15px;
+}
+#post--right:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 17px solid white;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    top: -1px;
+    left: -17px;
+}
+#post--left:after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    bottom: 0;
+    right: -15px;
+    
+}
+#post--left:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 17px solid transparent;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    bottom: -1px;
+    right: -17px;
+}
+
+.post__header {
+    color: black;
+    padding: .25rem .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+   
+}
+
+.post__header--name {
+  color: black;  
+}
+
+.post__header--time {
+    font-size: .8rem;
+}
+
+.post-text {
+    margin-top: 5px;
+    color:black;
+    padding: .25rem .5rem;
+    font-weight: bold;
+}
+
+.user-list,
+.room-list,
+.activity {
+    width: 100%;
+    min-height: 2.65rem;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: .75rem .25rem;
+}
+.user-list,
+.room-list{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:white;
+}
+
+.activity {
+    font-style: italic;
+}
+.hideButton{
+    visibility: hidden;
+}
